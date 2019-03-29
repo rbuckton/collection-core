@@ -4,9 +4,9 @@ The `collection-core` package provides a low-level Symbol-based API for defining
 
 # Overview
 
-* [Installation][]
-* [Usage][]
-* [API][]
+* [Installation](#installation)
+* [Usage](#usage)
+* [API](#api)
 
 # Installation
 
@@ -16,8 +16,8 @@ npm i collection-core
 
 # Usage
 
-* [Basic Usage][]
-* [Global Shim][]
+* [Basic Usage](#basic-usage)
+* [Global Shim](#global-shim)
 
 ## Basic Usage
 
@@ -117,13 +117,13 @@ import "collection-core/global"; // triggers global-scope side effects
 
 # API
 
-* [ReadonlyCollection][] - The minimal set of operations needed to read from a collection.
-* [Collection][] - The minimal set of operations needed to read from and write to a collection.
-* [ReadonlyIndexedCollection][] - The minimal set of operations needed to read from an integer-indexed collection.
-* [FixedSizeIndexedCollection][] - The minimal set of operations needed to read from or write to an integer-indexed collection where the size may be fixed (such as with Typed Arrays).
-* [IndexedCollection][] - The minimal set of operations needed to read from or write to an integer-indexed collection.
-* [ReadonlyKeyedCollection][] - The minimal set of operations needed to read from a keyed collection.
-* [KeyedCollection][] - The minimal set of operations needed to read from or write to a keyed collection.
+* [ReadonlyCollection](#readonlycollection) - The minimal set of operations needed to read from a collection.
+* [Collection](#collection) - The minimal set of operations needed to read from and write to a collection.
+* [ReadonlyIndexedCollection](#readonlyindexedcollection) - The minimal set of operations needed to read from an integer-indexed collection.
+* [FixedSizeIndexedCollection](#fixedsizeindexedcollection) - The minimal set of operations needed to read from or write to an integer-indexed collection where the size may be fixed (such as with Typed Arrays).
+* [IndexedCollection](#indexedcollection) - The minimal set of operations needed to read from or write to an integer-indexed collection.
+* [ReadonlyKeyedCollection](#readonlykeyedcollection) - The minimal set of operations needed to read from a keyed collection.
+* [KeyedCollection](#keyedcollection) - The minimal set of operations needed to read from or write to a keyed collection.
 
 ### `ReadonlyCollection`
 ```ts
