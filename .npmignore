@@ -1,0 +1,6 @@
+node_modules
+gulpfile.js
+jest.config.js
+__tests__
+*.ts
+!*.d.ts
