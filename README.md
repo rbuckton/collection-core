@@ -1,5 +1,9 @@
 # `collection-core`
 
+> NOTE: `collection-core` has been deprecated in favor of [`@esfx/collection-core`](https://github.com/esfx/esfx/blob/master/packages/collection-core#readme)
+> and [`@esfx/collection-core-shim`](https://github.com/esfx/esfx/blob/master/packages/collection-core-shim#readme).
+> Please update your references.
+
 The `collection-core` package provides a low-level Symbol-based API for defining common collection characteristics.
 
 # Overview
@@ -22,7 +26,7 @@ npm i collection-core
 ## Basic Usage
 
 ```ts
-import { Collection } from "collection-core"; 
+import { Collection } from "collection-core";
 
 class MyCollection {
     constructor() {
@@ -132,7 +136,7 @@ export interface ReadonlyCollection<T> extends Iterable<T> {
    * Gets the number of elements in the collection.
    */
   readonly [ReadonlyCollection.size]: number;
-  
+
   /**
    * Tests whether an element is present in the collection.
    */
@@ -222,7 +226,7 @@ export interface ReadonlyIndexedCollection<T> extends ReadonlyCollection<T> {
   [ReadonlyIndexedCollection.indexOf](value: T, fromIndex?: number): number;
 
   /**
-   * Gets the value at the specified index in the collection, or `undefined` if the index was outside 
+   * Gets the value at the specified index in the collection, or `undefined` if the index was outside
    * of the bounds of the collection.
    */
   [ReadonlyIndexedCollection.getAt](index: number): T | undefined;
@@ -235,13 +239,13 @@ export declare namespace ReadonlyIndexedCollection {
   export import isReadonlyCollection = ReadonlyCollection.isReadonlyCollection;
 
   /**
-   * A well-known symbol used to define the `ReadonlyIndexedCollection#[ReadonlyIndexedCollection.indexOf]` 
+   * A well-known symbol used to define the `ReadonlyIndexedCollection#[ReadonlyIndexedCollection.indexOf]`
    * method.
    */
   export const indexOf: unique symbol;
-  
+
   /**
-   * A well-known symbol used to define the `ReadonlyIndexedCollection#[ReadonlyIndexedCollection.getAt]` 
+   * A well-known symbol used to define the `ReadonlyIndexedCollection#[ReadonlyIndexedCollection.getAt]`
    * method.
    */
   export const getAt: unique symbol;
@@ -279,7 +283,7 @@ export declare namespace FixedSizeIndexedCollection {
   export import isReadonlyIndexedCollection = ReadonlyIndexedCollection.isReadonlyIndexedCollection;
 
   /**
-   * A well-known symbol used to define the `FixedSizeIndexedCollection#[FixedSizeIndexedCollection.setAt]` 
+   * A well-known symbol used to define the `FixedSizeIndexedCollection#[FixedSizeIndexedCollection.setAt]`
    * method.
    */
   export const setAt: unique symbol;
@@ -299,13 +303,13 @@ export declare namespace FixedSizeIndexedCollection {
 ```ts
 export interface IndexedCollection<T> extends FixedSizeIndexedCollection<T>, Collection<T> {
   /**
-   * Inserts a value at the specified index in the collection, shifting any following elements to the right 
+   * Inserts a value at the specified index in the collection, shifting any following elements to the right
    * one position.
    */
   [IndexedCollection.insertAt](index: number, value: T): void;
 
   /**
-   * Removes the value at the specified index in the collection, shifting any following elements to the left 
+   * Removes the value at the specified index in the collection, shifting any following elements to the left
    * one position.
    */
   [IndexedCollection.removeAt](index: number): void;
@@ -376,7 +380,7 @@ export interface ReadonlyKeyedCollection<K, V> extends Iterable<[K, V]> {
    * Gets an `IterableIterator` for the keys present in the collection.
    */
   [ReadonlyKeyedCollection.keys](): IterableIterator<K>;
-  
+
   /**
    * Gets an `IterableIterator` for the values present in the collection.
    */
